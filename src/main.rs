@@ -4,7 +4,7 @@ use calc_near_x::calc_with_1;
 #[async_std::main]
 async fn main() -> tide::Result<()>{
     let mut app = tide::new();
-    
+    println!("Iniciando servidor");
     app.at("/sum/:x/:y").get(sum);
     app.at("/sub/:x/:y").get(sub);
     app.listen("127.0.0.1:8080").await?;
